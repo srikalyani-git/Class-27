@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Afterclass</title>
+</head>
+
+<body>
+    <h1>Afterclass project</h1>
+    <p id="actual"></p>
+    <p id="array"></p>
+    <button onclick="ascending()">Ascending</button><button onclick="descending()">Descending</button>
+    <script>
+        var array1 = [10, 20, 35, 75, 100]
+        document.getElementById("actual").innerHTML = "Original array: " + array1 + "<br>"
+        document.getElementById("array").innerHTML = array1
+
+        function add(a)
+        {
+            return a + 10
+        }
+        var array2 = array1.map(add)
+        document.getElementById("array").innerHTML = array2
+
+        function ascending(a, b)
+        {
+            array2.sort(function (a, b) { return a - b })
+            document.getElementById("array").innerHTML = array2
+        }
+
+        function descending(a, b)
+        {
+            array2.sort(function (a, b) { return b - a })
+            document.getElementById("array").innerHTML = array2
+        }
+
+    </script>
+</body>
+
+</html>
